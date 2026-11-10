@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--Bootstrap (jic)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <!--my css wowowww!!!-->
+    <link rel="stylesheet" href="main.css">
+
+    <title>Periodic Table Information Finder</title>
+
+</head>
+<style>
+    body {
+        background: linear-gradient(0deg, #6a9577 0%, #ffffff 100%) no-repeat;
+        height: 900px;
+    }
+
+    p {
+        font-family: monospace;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="font-family: monospace;">
+                    <a class="nav-link" href="Q2project.html">Meet the 'Creator'</a>
+                </li>
+                <li class="nav-item" style="font-family: monospace;">
+                    <a class="nav-link" href="indexdrill2(Q2).html">School Club Members</a>
+                </li>
+                <li class="nav-item" style="font-family: monospace;">
+                    <a class="nav-link" href="seatwork1.html">Club Member Checker</a>
+                </li>
+                <li class="nav-item active" style="font-family: monospace; font-weight: bold;">
+                    <a class="nav-link" href="skillstest.html">Element Checker (N-M)</a>
+                </li>
+            </ul>
+        </div>
+    </nav><br>
+
+    <div id="seperatebox">
+        <h2>Non-Metal Elements</h2>
+        <p>Instructions: Enter the symbol of a non-metal element (Example: H, O, Cl, Ne, Xe.)</p>
+
+        <p>Element Finder</p>
+        <input type="text" style="margin-left: 580px; width: 350px; text-align: center;" id="elementfinder"
+            placeholder="Input the symbol of an element that is a nonmetal!"><br>
+        <input type="button" style="margin-top: 10px; margin-left: 695px;" class="btn-btn btn-primary"
+            py-click="collect_nonmetal" value="Search Details"><br>
+        <div style="margin-top: 10px; font-family: monospace; text-align: center;" id="output"></div>
+        <py-script src="mainst.py"></py-script>
+    </div>
+</body>
+<footer>
+    <h5 style="font-family: monospace;   background-color: rgb(#426260); text-align: center;">Stephanie Toralde |
+        10-Topaz @ OBMC
+        GREENHILLS</h5>
+</footer>
+
+</html>
