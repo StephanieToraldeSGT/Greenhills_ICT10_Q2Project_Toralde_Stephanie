@@ -40,10 +40,11 @@ def collect_nonmetal(e):
     
     atomicmass = ['1.008', '4.0026', '12.011', '14.007', '15.999', '18.998', '20.180', '30.974', '32.06', '35.45', '39.948', '78.971', '79.904', '83.798', '126.9045', '131.293', '~222 (no stable mass; mass number)']
 
-# conversion
+    # conversion
     converteda_n = tuple(atomic_no)
     convertedam = tuple(atomicmass)
 
+    # create a dict jic for further use
     atomicno_mass = dict(zip(converteda_n, convertedam))
     atomicno_mass = {
     '1' : '1.008',
@@ -65,7 +66,10 @@ def collect_nonmetal(e):
     '86' : '~222 (no stable mass; mass number)'
     }
 
-    display(f' | Symbol: {convertedso_e} | Element Name: {symbolelement_elementname.get(convertedso_e)} | Atomic Number: {atomicno_mass.get(convertedam)} | Atomic Mass: {atomicno_mass.get(converteda_n)}', target='output')
+    #combination
+    elementatomiccombo = {**symbolelement_elementname, **atomicno_mass}
+
+    display(f' | Symbol: {convertedso_e} | Element Name: {symbolelement_elementname.get(convertedso_e)} | Atomic Number: {elementatomiccombo.get(convertedam)} | Atomic Mass: {elementatomiccombo.get(converteda_n)}', target='output')
 
 # display(f'Ang Ingles ng {english_dictionary['defenestration']} ay {english_dictionary.get('ihagis sa bintana', 'defenestration')}', target='output')
 
